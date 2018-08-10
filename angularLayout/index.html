@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link href="favicon.ico" type="image/x-icon" rel="icon" />
+    <!-- SPELLS -->
+    <!-- load angular via CDN -->
+    <script src="https://code.angularjs.org/1.7.3/angular.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/systemjs/0.21.3/system.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/2.0.0-beta.17/http.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/2.0.0-beta.17/angular2.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/@uirouter/angular/_bundles/ui-router-ng2.js"></script> -->
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <!--base tag is for  locationProvider.html5Mode -->
+    <base href="/">
+</head>
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+
+<body ng-app="myApplication">
+    <div ng-include="'layout/header.html'"></div>
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ui-view></div>
+    <div ui-view="status"></div>
+
+    <div ng-include="'./layout/footer.html'"></div>
+</body>
+
+</html>
