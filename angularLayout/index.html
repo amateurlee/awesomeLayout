@@ -19,16 +19,18 @@
     <script src="https://cdn.bootcss.com/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <!--base tag is for  locationProvider.html5Mode -->
-    <base href="/">
+    <!-- <base href="/"> -->
 </head>
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 
 <body ng-app="myApplication">
-    <div ng-include="'layout/header.html'"></div>
+    <div ng-include="'layout/header.html'" style="position:fixed; top:0px; left:0px;right:0px; width:100%;height: 30px;z-index:999"></div>
     <!-- angular templating -->
     <!-- this is where content will be injected -->
-    <div ui-view></div>
-    <div ui-view="status"></div>
+    <div id='center' style="margin-top: 52px">
+        <div ui-view></div>
+        <div ui-view="status"></div>
+    </div>
 
     <div ng-include="'./layout/footer.html'"></div>
 </body>
